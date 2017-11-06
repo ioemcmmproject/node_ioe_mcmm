@@ -1,2 +1,159 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<head>
+
+	<title> MCMM Routing Guide </title>
+	<link href="Style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+	
+	<body>
+		<h1>MCMM Routing Guide</h1>
+
+		<ul>
+		
+
+
+		</ul>>
+
+		<a href="http://www.google.com"> This is a link to google </a>
+		<br><br>
+
+		<form action="">
+		First name:<br>
+		<input type="text" name="firstname">
+		<br>
+		Last name:<br>
+		<input type="text" name="lastname">
+		</form>
+
+		<br>
+
+			<fieldset>
+  		<legend>Choose your architect</legend>
+
+  		<div>
+    	<input type="checkbox" id="coding" name="interest" value="coding">
+    	<label for="coding">Alden B. Dow</label>
+  		</div>
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">Francis Warner</label>
+  		</div>
+
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">Jackson Hallett</label>
+  		</div>
+
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">Glen Beach</label>
+  		</div>  	
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">Robert Schwartz</label>
+  		</div> 
+
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">C.G. Shulwitz</label>
+  		</div> 
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">C.G. Shulwitz</label>
+  		</div> 
+
+  		<div>
+    	<input type="checkbox" id="music" name="interest" value="music">
+    	<label for="music">C.G. Shulwitz</label>
+  		</div> 
+
+
+
+
+
+			</fieldset>
+
+
+			<br>
+
+
+
+
+
+
+
+		Select the architect
+		<form action="/action_page.php">
+  	<select name="cars">
+    <option value="un">un</option>
+    <option value="abd">abd</option>
+    <option value="warn">warn</option>
+    <option value="hall">hall</option>
+  	</select>
+  	<br><br>
+		</form>
+
+		<br>
+		Select the decades
+		<form action="/action_page.php">
+  	<select name="cars">
+    <option value="92">92</option>
+    <option value="93">93</option>
+    <option value="94">94</option>
+    <option value="95">95</option>
+  	</select>
+  	<br><br>
+		</form>
+
+		<br>
+		Select the architect
+		<form action="/action_page.php">
+  	<select name="cars">
+    <option value="volvo">ABDOW</option>
+    <option value="saab">Architect 2</option>
+    <option value="fiat">Architect 3</option>
+    <option value="audi">Architect 4</option>
+  	</select>
+  	<br><br>
+
+		</form>
+
+
+
+
+
+		<p>Click the button to get your current coordinates. </p>
+
+		<button onclick="getLocation()">Try It</button>
+
+		<p id="demo"></p>
+
+		<script>
+		var x = document.getElementById("demo");
+
+		function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+		function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+		}
+		</script>
+
+
+
+	</body>
+
+
