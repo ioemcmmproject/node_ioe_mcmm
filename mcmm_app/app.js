@@ -16,10 +16,10 @@ const firebaseApp = firebase.initializeApp(
     functions.config().firebase
 );
 
-function getvalue() {
-    const ref = firebaseApp.database().ref();
-    return ref.once('value').then(snap => snap.val());
-}
+//function getvalue() {
+//    const ref = firebaseApp.database().ref();
+//    return ref.once('value').then(snap => snap.val());
+//}  
 
 // view engine setup
 app.engine('hbs', engines.handlebars);
