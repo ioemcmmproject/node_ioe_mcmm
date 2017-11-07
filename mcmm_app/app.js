@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-app.get('/', (request, response) => {
+/**app.get('/', (request, response) => {
     response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
     getvalue().then(value => {
         response.render('index', { value });
@@ -46,9 +46,8 @@ app.get('/value.json', (request, response) => {
     getvalue().then(value => {
         response.json(value);
     });
-});
+});*/
 
-exports.app = functions.https.onRequest(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -68,5 +67,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+exports.app = functions.https.onRequest(app);
 
