@@ -11,15 +11,15 @@ var users = require('./routes/users');
 
 var app = express();
 
-//firebase setup
+//firebase setup - this has to go in many files
 const firebaseApp = firebase.initializeApp(
     functions.config().firebase
 );
 
-//function getvalue() {
-//    const ref = firebaseApp.database().ref();
-//    return ref.once('value').then(snap => snap.val());
-//}  
+function getvalue() {
+    const ref = firebaseApp.database().ref();
+    return ref.once('value').then(snap => snap.val());
+}  
 
 // view engine setup
 app.engine('hbs', engines.handlebars);
@@ -68,4 +68,6 @@ app.use(function(err, req, res, next) {
 });
 
 exports.app = functions.https.onRequest(app);
+
+//we may actually have to do module exports here
 
